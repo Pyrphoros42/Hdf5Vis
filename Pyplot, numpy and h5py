@@ -1,0 +1,79 @@
+
+Pyplot:
+
+OO oder interactive mit Jupyter
+
+# artist primitives
+Line2D, Rectangle, Text, AxesImage, ...
+
+# artist container
+axis: Achsen
+axes: Plots
+figure: final image with one/several axes
+
+# basic commands
+plot(x,y) = plotte Graph mit (x1,y1; x2,y2; ...)
+plot.show() = anzeigen lassen (non-interactive, nur eins gleichzeitig)
+
+# inspect artist element
+plt.getp(artist)
+
+# axes in artist
+for ax in fig.axes:
+    ax.grid(True)
+fig.add_subplot(211)
+fig.add_axes([0,1,2,3])
+
+
+# Plotting several Plots in one picture
+fig, ax = plt.subplot(nrow,ncol,index, figsize=[x,y])
+
+# Plotting an additional vertical line
+ax.axvline(group_mean, ls'--', color='r')
+
+
+
+
+# axis label and limit
+ax.set(xlabel='x', ylabel='y', title='title', xlim=[0,1])
+ax.title.set(y=1.05)
+
+# access patch: border around axes or figures
+rect= ax.patch
+rect.set_facecolor('green')
+
+# Annotation example
+for group in [3,5,8]:
+    ax.text(group, ymax, 'new company', fontsize = 10)
+
+# Layout update
+plt.rcParams.update({figure.autolayout: True}) # autoupdate for out-of-bounds layout
+
+# TeX expressions accepted
+plt.text(xwert,ywert, r'$ freitext \mu \sigma freitext $')
+
+
+# Formatter *exists* for changing label format (mill, k, etc)
+
+
+
+
+
+
+
+
+
+
+# Histogram
+plt.hist(array
+
+# other plotting types
+mplot3d for 3d plotting?!
+streamplot()
+scatter()
+
+# colored representation of a two-dimensional array
+pcolormesh([X,Y] C, **kwargs)
+C = 2d scalar array
+X, Y = optional square size for higher contrase?
+
